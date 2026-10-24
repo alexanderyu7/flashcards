@@ -11,7 +11,7 @@
 
     <section>
         <h2>Decks</h2>
-        <input id="deck-name" type="text" placeholder="New deck name">
+        <input id="deck-name" type="text" placeholder="Enter deck name">
         <button id="add-deck">Add Deck</button>
         <ul id="deck-list"></ul>
     </section>
@@ -21,9 +21,28 @@
         <input id="card-front" type="text" placeholder="Front">
         <input id="card-back" type="text" placeholder="Back">
         <button id="add-card">Add Card</button>
+        <button id="start-study">Start Review</button>
         <ul id="card-list"></ul>
+
+        <button id="delete-deck">Delete Deck</button>
     </section>
 
+    <section id="study-section" hidden>
+        <h2 id="study-title">Study</h2>
+        <p id="progress"></p>
+        <progress id="progress-bar" value="0" max="1"></progress>
+        <p id="study-front"></p>
+        <p id="study-back" hidden></p>
+        <button id="show-answer">Show Answer</button>
+        <div id="quality-buttons" hidden>
+            <button data-quality="1">I don't know.</button>
+            <button data-quality="2">I struggled.</button>
+            <button data-quality="3">I got it!</button>
+        </div>
+        <button id="end-study">Back</button>
+    </section>
+
+    <script src="study.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

@@ -19,3 +19,5 @@ function sm2(card, quality) {
 
     return { ...card, streak, interval, easiness };
 }
+
+module.exports = { sm2 };
