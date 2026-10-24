@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Flashcards</h1>
+
+    <section>
+        <h2>Decks</h2>
+        <input id="deck-name" type="text" placeholder="New deck name">
+        <button id="add-deck">Add Deck</button>
+        <ul id="deck-list"></ul>
+    </section>
+
+    <section id="card-section" hidden>
+        <h2 id="deck-title"></h2>
+        <input id="card-front" type="text" placeholder="Front">
+        <input id="card-back" type="text" placeholder="Back">
+        <button id="add-card">Add Card</button>
+        <ul id="card-list"></ul>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
