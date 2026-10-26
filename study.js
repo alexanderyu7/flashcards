@@ -23,3 +23,7 @@ function study(card, quality) {
 
     return { card: { ...card, streak, misses }, interval };
 }
+
+if (typeof module !== "undefined") {
+    module.exports = { study };
+}
