@@ -29,3 +29,14 @@ Instead of using the SM-2 algorithm, which schedules reviews days apart, this ap
 - HTML, CSS, plain JavaScript (no frameworks or backend)
 - localStorage - decks stored in the browser, so data stays on one device and is lost if the site data is cleared
 - Hosted on Vercel
+
+## Testing
+The study logic has unit tests that use the `assert` module in Node.js. The tests require installing [Node.js](https://nodejs.org).
+The tests cover the ratings, streaks and misses, intervals, and the mastery condition.
+
+Run the tests from the project folder:
+```bash
+node study-test.js
+```
+
+It prints "All tests passed." if all tests succeed.
