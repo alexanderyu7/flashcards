@@ -9,7 +9,7 @@
 <body>
     <h1>Flashcards</h1>
 
-    <section>
+    <section id="deck-section">
         <h2>Decks</h2>
         <input id="deck-name" type="text" placeholder="Enter deck name">
         <button id="add-deck">Add Deck</button>
@@ -18,10 +18,15 @@
 
     <section id="card-section" hidden>
         <h2 id="deck-title"></h2>
-        <input id="card-front" type="text" placeholder="Front">
-        <input id="card-back" type="text" placeholder="Back">
-        <button id="add-card">Add Card</button>
-        <button id="start-study">Start Review</button>
+        <div id="card-heading">
+            <textarea id="card-front" type="text" placeholder="Enter your question or term..."></textarea>
+            <textarea id="card-back" type="text" placeholder="Enter the answer or definition..."></textarea>
+            <div id="card-buttons">
+                <button id="add-card">Add Card</button>
+                <button id="start-study">Start Review</button>
+            </div>  
+        </div>
+        <p id="edit-tip">Click a card below to edit it.</p>
         <ul id="card-list"></ul>
 
         <button id="delete-deck">Delete Deck</button>
@@ -29,8 +34,10 @@
 
     <section id="study-section" hidden>
         <h2 id="study-title">Study</h2>
-        <p id="progress"></p>
-        <progress id="progress-bar" value="0" max="1"></progress>
+        <div id="progress-whole">
+            <p id="progress"></p>
+            <progress id="progress-bar" value="0" max="1"></progress>
+        </div>
         <p id="study-front"></p>
         <p id="study-back" hidden></p>
         <button id="show-answer">Show Answer</button>
@@ -39,7 +46,7 @@
             <button data-quality="2">I struggled.</button>
             <button data-quality="3">I got it!</button>
         </div>
-        <button id="end-study">Back</button>
+        <button id="end-study">Back to Deck</button>
     </section>
 
     <script src="study.js"></script>

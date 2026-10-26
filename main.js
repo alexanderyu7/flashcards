@@ -99,7 +99,7 @@ function render() {
     for (const deck of decks) {
         const li = document.createElement("li");
         const btn = document.createElement("button");
-        btn.textContent = `${deck.name} (Number of Cards:${deck.cards.length})`;
+        btn.textContent = `${deck.name} (${deck.cards.length})`;
         btn.addEventListener("click", () => {
             currentDeckId = deck.id;
             sessionQueue = [];
@@ -131,7 +131,7 @@ function render() {
             editCardId = card.id;
             document.getElementById("card-front").value = card.front;
             document.getElementById("card-back").value = card.back;
-            document.getElementById("add-card").textContent = "Save Card";
+            document.getElementById("add-card").textContent = "Save Card - (Editing Mode)";
         });
 
         const deleteButton = document.createElement("button");
